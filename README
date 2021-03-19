@@ -1,0 +1,18 @@
+https://packaging.python.org/tutorials/packaging-projects/
+
+This is a simple test for a pypi distribution
+
+Step 1 - update build system
+$ python3 -m pip install --upgrade build
+
+Step 2 - build
+$ python3 -m build
+
+Step 3 - install twine
+$ python3 -m pip install --user --upgrade twine
+
+Step 4 - Upload
+$ python3 -m twine upload --repository testpypi dist/*
+
+Step 5 - install from test.pypi.org
+$ python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps TSU-Module
